@@ -23,17 +23,17 @@ The ``reverse`` filter reverses a sequence, a mapping, or a string:
 
     .. code-block:: jinja
 
-        {% for key, value in {1: "a", 2: "b", 3: "c"}|reverse %}
+        {% for key, value in {0: "a", 1: "b", 2: "c"}|reverse %}
             {{ key }}: {{ value }}
         {%- endfor %}
 
         {# output: 0: c    1: b    2: a #}
 
-        {% for key, value in {1: "a", 2: "b", 3: "c"}|reverse(true) %}
+        {% for key, value in {0: "a", 1: "b", 2: "c"}|reverse(true) %}
             {{ key }}: {{ value }}
         {%- endfor %}
 
-        {# output: 3: c    2: b    1: a #}
+        {# output: 2: c    1: b    0: a #}
 
 .. note::
 
